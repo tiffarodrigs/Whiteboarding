@@ -1,0 +1,14 @@
+function arrayDeduping(input)
+{
+  const output=input.reduce((prevVal,curVal)=>{
+
+    if(!(prevVal.includes(curVal)))
+    {
+      prevVal.push(curVal);
+    }
+    return prevVal;
+  },[]);
+  return output;
+}
+
+arrayDeduping([7, 9, "hi", 12, "hi",7, 53])
