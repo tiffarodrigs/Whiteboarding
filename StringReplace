@@ -11,19 +11,22 @@
 ///implement with reduce-WIP
 function StrReplace(input)
 {
-  let wordArray = input.split()
-  wordArray.reduce((prevVal,currVal,CurrIndex)=>
+  let wordArray = input.split(" ")
+  const output =wordArray.reduce((prevVal,currVal,CurrIndex)=>
   {
-   let output= prevVal.concat("%20");
-    if( CurrIndex == wordArray.Length-1)
+    if( CurrIndex != wordArray.length-1)
     {
-      output = output + currVal 
+      prevVal= prevVal + currVal.concat("%20");
     }
-  });
-  
-  String.prototype.padEnd();
-
+    else
+    {
+      prevVal = prevVal+ currVal ;
+    }
+    return prevVal
+  },"");
+  console.log ("output : "+output);
 }
+StrReplace("Jasmine Ann Jones");
 ///implement with for
 function StrReplace(input)
 {
@@ -49,3 +52,5 @@ function StrReplace(input)
   return output
 }
 StrReplace("Jasmine Ann Jones");
+
+  //String.prototype.padEnd();
