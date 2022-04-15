@@ -60,24 +60,16 @@ function StrReplace(input)
   let wordArray = input.split(" ")
   let poppedWord=wordArray.pop()
   let output="";
-  console.log("outwordArray",wordArray)
   if (input=="")
   {
-    console.log("1ifinput",input)
     return "";
   }
-  if((input.split()).length ==1)
+  if((input.split(" ")).length ==1)
   {
-    console.log("2ifinput",input)
-    console.log("wordArray.join() :",wordArray.join(""))
-   output= `${wordArray.join("")}`+ `${output}`;
+  return input
   }
   else{
-    console.log("elseinput",input)
-    console.log("elseinput",wordArray)
-    console.log("wordArray.join(' ')",wordArray.join(" "))
   output=`${StrReplace(wordArray.join(" "))}`+`2%${poppedWord}`
-  //return `${StrReplace(wordArray.join(" "))}%20${poppedWord}`
   }
   return output
 }
