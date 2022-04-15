@@ -12,15 +12,18 @@
 function checkUnique(input)
 {
   let output="true";
-  for(let eachChar of input)
+  if(isNaN(input))
   {
-    //use includes(searchstring,postionFromWhichToSeach)
-    if(input.includes(eachChar,(input.indexOf(eachChar))+1))
+    for(let eachChar of input)
     {
-      output = "false";  
+      //use includes(searchstring,postionFromWhichToSeach)
+      if(input.includes(eachChar,(input.indexOf(eachChar))+1))
+      {
+        output = "false";  
+      }
     }
+    return output;
   }
-  return output;
 }
 checkUnique("hello");
 checkUnique("copyright");
