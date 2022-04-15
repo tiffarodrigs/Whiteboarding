@@ -1,0 +1,51 @@
+// Question #1: Turning Strings to URLs
+// URLs cannot have spaces. Instead, all spaces in a string are replaced with %20. Write an algorithm that replaces all spaces in a string with %20.
+
+// You may not use the replace() method or regular expressions to solve this problem. Solve the problem with and without recursion.
+
+// Example
+// Input: "Jasmine Ann Jones"
+
+// Output: "Jasmine%20Ann%20Jones"
+
+///implement with reduce-WIP
+function StrReplace(input)
+{
+  let wordArray = input.split()
+  wordArray.reduce((prevVal,currVal,CurrIndex)=>
+  {
+   let output= prevVal.concat("%20");
+    if( CurrIndex == wordArray.Length-1)
+    {
+      output = output + currVal 
+    }
+  });
+  
+  String.prototype.padEnd();
+
+}
+///implement with for
+function StrReplace(input)
+{
+  let wordArray = input.split(" ")
+  let output="";
+  if(NaN){
+    return "Enter a string";
+  }
+  for (let i=0;i<wordArray.length;i++)
+  {
+    
+    if(i!=(wordArray.length-1) )
+    {
+    output = output+ wordArray[i].concat("%20");
+    }
+    else
+    {
+
+      output =  output + wordArray[i];
+    }
+    
+  }
+  return output
+}
+StrReplace("Jasmine Ann Jones");
