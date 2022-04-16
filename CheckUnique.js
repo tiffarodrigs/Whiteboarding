@@ -24,6 +24,31 @@ function checkUnique(input)
     }
     return output;
   }
+  else{
+    return "Enter a String";
+  }
 }
 checkUnique("hello");
 checkUnique("copyright");
+
+function checkUnique(input)
+{
+  let output="true";
+  if(isNaN(input))
+  {
+    for (i=0;i<input.length;i++)
+    {
+      for(j=0;j<input.length;j++)
+      {
+        if(i!=j)
+        {
+          if(input[i]==input[j])
+          {
+            output="false";
+          }
+        }
+      }
+    }
+    return output;
+  }
+}

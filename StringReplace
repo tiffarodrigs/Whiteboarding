@@ -36,18 +36,15 @@ function StrReplace(input)
     return "Enter a string";
   }
   for (let i=0;i<wordArray.length;i++)
-  {
-    
+  {   
     if(i!=(wordArray.length-1) )
     {
     output = output+ wordArray[i].concat("%20");
     }
     else
     {
-
       output =  output + wordArray[i];
-    }
-    
+    }    
   }
   return output
 }
