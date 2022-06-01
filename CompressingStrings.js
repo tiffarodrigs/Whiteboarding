@@ -47,8 +47,8 @@ function CompString(input)
   });
 }
 
-CompString("aaabccdddda");
-//implementing using for
+CompString("caabccdddda");
+/*//implementing using for
 function CompString(input)
 {
   let charArray = input.split("");
@@ -90,5 +90,4 @@ function CompString(input)
   }
 }
 CompString("aaabccdddda");
-
-//||(i==(charArray.length-1)))
+*/
